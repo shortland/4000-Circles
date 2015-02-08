@@ -9,7 +9,7 @@
 var release = 50; // in ms (.5s)
 
 // move speed of a circle to its defined location after release
-var movement = 2000; // in ms (.5s)
+var movement = 2000; // in ms (2s)
 
 // callback speed: once a circle is released, it is slowly brough back to its original corner, this defines the amount of time for each circle to take on moving back to its corner
 var callback = 30000; // in ms (30s)

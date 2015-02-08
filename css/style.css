@@ -1,0 +1,70 @@
+/*
+* Ilan Kleiman
+* February 7th 2015
+* 4000 circles - style.css
+* http://ilankleiman.com
+*/
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(lato.tff) format('truetype');
+}
+#header
+{
+	font-family: 'Lato', sans-serif;
+	position: fixed;
+	top: 45%;
+	width: 100%;
+	z-index: 2;
+	color: #000000;
+	text-align: center;
+	font-size: 46px;
+	font-weight: bold;
+	opacity: 0.6;
+	background-color: rgb(250, 250, 250);
+}
+.circles_tl
+{
+	width: 2px;
+	height: 2px;
+	background-color: #FFFFFF;
+	border-radius: 1px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	opacity: 0.5;
+}
+.circles_tr
+{
+	width: 2px;
+	height: 2px;
+	background-color: #FFFFFF;
+	border-radius: 1px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	opacity: 0.5;
+}
+.circles_bl
+{
+	width: 2px;
+	height: 2px;
+	background-color: #FFFFFF;
+	border-radius: 1px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.5;
+}
+.circles_br
+{
+	width: 2px;
+	height: 2px;
+	background-color: #FFFFFF;
+	border-radius: 1px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	opacity: 0.5;
+}

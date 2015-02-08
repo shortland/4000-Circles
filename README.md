@@ -1,4 +1,4 @@
-# circles
+# 4000 Circles
 A really awesome jQuery/CSS animation!
 
 <b>DEMO: http://ilankleiman.com/demo/circles/index.html</b>

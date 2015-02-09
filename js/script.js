@@ -6,7 +6,7 @@
 */
 
 // release speed of a circle
-var release = 50; // in ms (.5s)
+var release = 50; // in ms (.05s)
 
 // move speed of a circle to its defined location after release
 var movement = 2000; // in ms (2s)

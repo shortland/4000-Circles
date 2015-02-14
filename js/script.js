@@ -14,23 +14,22 @@ var movement = 2000; // in ms (2s)
 // callback speed: once a circle is released, it is slowly brough back to its original corner, this defines the amount of time for each circle to take on moving back to its corner
 var callback = 30000; // in ms (30s)
 
-/*
-*	Begin functions
-*/
-function getRandomColor() {
-    var letters = '0123456789ABCDEF'.split('');
-    var color = '';
-    for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+function getRandomColor()
+{
+	var letters = '0123456789ABCDEF'.split('');
+	var color = '';
+	for (var i = 0; i < 6; i++ ) {
+	color += letters[Math.floor(Math.random() * 16)];
+	}
+	return color;
 }
 
-function getDiameter() {
+function getDiameter()
+{
 	var max_size = $(window).width() / 2;
 	var diameter = Math.floor((Math.random() * max_size) + 20);
-    var diameter = Math.floor(diameter / 2);
-    return diameter;
+	var diameter = Math.floor(diameter / 2);
+	return diameter;
 }
 
 function getMaxLeft(diameter)

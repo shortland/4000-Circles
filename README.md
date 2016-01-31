@@ -1,7 +1,7 @@
 # 4000 Circles
 A really awesome jQuery/CSS animation!
 
-<b>DEMO: http://ilankleiman.com/demo/circles/index.html</b>
+<b>DEMO: http://ilankleiman.com/projects/circles/index.html</b>
 
 A must watch/see!
 

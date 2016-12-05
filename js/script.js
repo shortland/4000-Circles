@@ -3,10 +3,12 @@
 * Original:
 * February 7th 2015
 * Latest edit:
-* December 4th 2016
+* December 5th 2016
 * 4000 circles - script.js
 * http://ilankleiman.com
 */
+
+// along with Better Colors
 
 // release speed of a circle
 var release = 50; // in ms (.05s)
@@ -21,14 +23,45 @@ var callback = 20000; // in ms (30s)
 // 1 = 1/2 of window width. 2 = ((1/2)/2) = 1/4 of window width). 3 = 1/6 window width. 4 = 1/8 window width (max size is 1/8 of window width)
 var variant = 1; // Math.floor(Math.random() * 10) + 1; // or a random number everytime you reload the page
 
+function HSVtoRGB(h, s, v) {
+    var r, g, b, i, f, p, q, t;
+    if (arguments.length === 1) {
+        s = h.s, v = h.v, h = h.h;
+    }
+    i = Math.floor(h * 6);
+    f = h * 6 - i;
+    p = v * (1 - s);
+    q = v * (1 - f * s);
+    t = v * (1 - (1 - f) * s);
+    switch (i % 6) {
+        case 0: r = v, g = t, b = p; break;
+        case 1: r = q, g = v, b = p; break;
+        case 2: r = p, g = v, b = t; break;
+        case 3: r = p, g = q, b = v; break;
+        case 4: r = t, g = p, b = v; break;
+        case 5: r = v, g = p, b = q; break;
+    }
+    return Math.round(r * 255) + ", " + Math.round(g * 255) + ", " + Math.round(b * 255);
+}
+
 function getRandomColor()
 {
+	/*
 	var letters = '0123456789ABCDEF'.split('');
 	var color = '';
 	for (var i = 0; i < 6; i++ ) {
 	color += letters[Math.floor(Math.random() * 16)];
 	}
 	return color;
+	*/
+	
+	// Better Colors
+	// http://martin.ankerl.com/2009/12/09/how-to-create-random-colors-programmatically/
+	var golden_ratio_conjugate = 0.618033988749895;
+	var h = Math.random(); // use random start value
+	h += golden_ratio_conjugate;
+	h %= 1;
+	return HSVtoRGB(h, 0.5, 0.95);
 }
 
 function getDiameter()
@@ -80,7 +113,7 @@ function size_circle(idit)
 		{
 			'width' : diameter, 
 			'height' : diameter, 
-			'background-color' : '#' + bg_color,
+			'background-color' : "rgb(" + bg_color + ")",
 			'border-radius' : radius,
 			'top' : topt + 'px',
 			'left' : left + 'px'
@@ -100,7 +133,7 @@ function size_circle(idit)
 		{
 			'width' : diameter, 
 			'height' : diameter, 
-			'background-color' : '#' + bg_color,
+			'background-color' : "rgb(" + bg_color + ")",
 			'border-radius' : radius,
 			'bottom' : topt + 'px',
 			'right' : left + 'px'
@@ -120,7 +153,7 @@ function size_circle(idit)
 		{
 			'width' : diameter, 
 			'height' : diameter, 
-			'background-color' : '#' + bg_color,
+			'background-color' : "rgb(" + bg_color + ")",
 			'border-radius' : radius,
 			'top' : topt + 'px',
 			'right' : left + 'px'
@@ -140,7 +173,7 @@ function size_circle(idit)
 		{
 			'width' : diameter, 
 			'height' : diameter, 
-			'background-color' : '#' + bg_color,
+			'background-color' : "rgb(" + bg_color + ")",
 			'border-radius' : radius,
 			'bottom' : topt + 'px',
 			'left' : left + 'px'

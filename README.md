@@ -15,3 +15,15 @@ Doesn't run all that well on mobile devices.<br/>
 
 The majority of the code is JavaScript / jQuery. (I tried very hard to make it as neat as possible) <br/>
 There are 3 variables at the top of the <b>script.js</b> They are there for you to toggle & mess around with! Enjoy!
+
+
+<br/><br/>
+
+Latest edit:<br/>
+- Addition of Better Colors
+
+- After image on the left; Before image on the right.<br/>
+Notice the smoother colors?
+
+
+![alt tag](https://raw.githubusercontent.com/shortland/4000-Circles/master/Screen%20Shot%202016-12-05%20at%202.39.39%20AM.png)
